@@ -1,14 +1,14 @@
 [build]
-  command = "hugo --gc --minify --cleanDestinationDir"
+  command = "echo '开始构建' && mkdir -p public && echo '当前目录:' && pwd && echo '图标目录内容:' && ls -la public/assets/images/logos/ && hugo --gc --minify --cleanDestinationDir --verbose --verboseLog -d public && echo '构建后public目录内容:' && ls -la public/assets/images/logos/"
   publish = "public"
   
 [context.production.environment]
-  HUGO_VERSION = "0.139.0"  # 替换为你的Hugo版本
+  HUGO_VERSION = "0.139.0"
   HUGO_ENV = "production"
   HUGO_ENABLEGITINFO = "true"
   
 [context.deploy-preview]
-  command = "hugo --gc --minify --buildFuture -b $DEPLOY_PRIME_URL --verbose --verboseLog"
+  command = "echo '开始构建' && mkdir -p public && echo '当前目录:' && pwd && echo '图标目录内容:' && ls -la public/assets/images/logos/ && hugo --gc --minify --buildFuture -b $DEPLOY_PRIME_URL --verbose --verboseLog -d public && echo '构建后public目录内容:' && ls -la public/assets/images/logos/"
   
 [context.branch-deploy]
-  command = "hugo --gc --minify --buildFuture -b $DEPLOY_PRIME_URL --verbose --verboseLog"
+  command = "echo '开始构建' && mkdir -p public && echo '当前目录:' && pwd && echo '图标目录内容:' && ls -la public/assets/images/logos/ && hugo --gc --minify --buildFuture -b $DEPLOY_PRIME_URL --verbose --verboseLog -d public && echo '构建后public目录内容:' && ls -la public/assets/images/logos/"

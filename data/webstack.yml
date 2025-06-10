@@ -4,7 +4,7 @@
   icon: far fa-star
   links: 
     - title: demius`blog
-      logo: tx.jpg
+      logo: /assets/images/logos/tx.jpg  # 更新为实际路径
       url: https://blog.demius.tech/
       description: 天行健，君子以自强不息
     - title: demius`blog`后台
