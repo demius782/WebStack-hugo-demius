@@ -7,6 +7,10 @@
       logo: tx.jpg
       url: https://blog.demius.tech/
       description: 天行健，君子以自强不息
+    - title: demius`blog`后台
+      logo: https://api.iowen.cn/favicon/blog.demius.tech/demiusadmin5214.png
+      url: https://blog.demius.tech/demiusadmin5214/
+      description: 博客后台
     - title: QQ 邮箱
       logo: qq邮箱.png
       url: http://mail.qq.com/
