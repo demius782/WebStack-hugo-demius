@@ -1,14 +1,14 @@
 [build]
-  command = "echo '当前目录内容:' && ls -la && mkdir -p public && hugo --gc --minify --cleanDestinationDir --verbose --verboseLog -d public || (echo 'Hugo build failed' && find public -type f && exit 1)"
+  command = "hugo --gc --minify --cleanDestinationDir"
   publish = "public"
   
 [context.production.environment]
-  HUGO_VERSION = "0.139.0"  # 更新为Netlify使用的版本
+  HUGO_VERSION = "0.139.0"  # 替换为你的Hugo版本
   HUGO_ENV = "production"
   HUGO_ENABLEGITINFO = "true"
   
 [context.deploy-preview]
-  command = "echo '当前目录内容:' && ls -la && mkdir -p public && hugo --gc --minify --buildFuture -b $DEPLOY_PRIME_URL --verbose --verboseLog -d public || (echo 'Hugo build failed' && find public -type f && exit 1)"
+  command = "hugo --gc --minify --buildFuture -b $DEPLOY_PRIME_URL --verbose --verboseLog"
   
 [context.branch-deploy]
-  command = "echo '当前目录内容:' && ls -la && mkdir -p public && hugo --gc --minify --buildFuture -b $DEPLOY_PRIME_URL --verbose --verboseLog -d public || (echo 'Hugo build failed' && find public -type f && exit 1)"
+  command = "hugo --gc --minify --buildFuture -b $DEPLOY_PRIME_URL --verbose --verboseLog"
