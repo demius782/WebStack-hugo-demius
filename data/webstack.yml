@@ -4,11 +4,11 @@
   icon: far fa-star
   links: 
     - title: demius`blog
-      logo: /assets/images/logos/tx.jpg  # 更新为实际路径
+      logo: tx.jpg  # 更新为实际路径E:\网站\hugo\WebStack\themes\WebStack-Hugo\static\assets\images\logos
       url: https://blog.demius.tech/
       description: 天行健，君子以自强不息
     - title: demius`blog`后台
-      logo: https://api.iowen.cn/favicon/blog.demius.tech/demiusadmin5214.png
+      logo: tx.jpg
       url: https://blog.demius.tech/demiusadmin5214/
       description: 博客后台
     - title: QQ 邮箱
@@ -44,7 +44,7 @@
           url: https://fanqienovel.com/
           description: 抖音旗下小说平台，流量最大
         - title: 作家助手
-          logo: https://api.iowen.cn/favicon/write.qq.com.png
+          logo: 作家助手.png
           url: https://write.qq.com/
           description: 最好的码字软件，目前
     - term: 云服务器
