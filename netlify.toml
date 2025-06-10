@@ -1,5 +1,5 @@
 [build]
-  command = "echo '开始构建' && mkdir -p public && echo '当前目录:' && pwd && echo '图标目录内容:' && ls -la public/assets/images/logos/ && hugo --gc --minify --cleanDestinationDir --verbose --verboseLog -d public && echo '构建后public目录内容:' && ls -la public/assets/images/logos/"
+  command = "echo '开始构建' && mkdir -p public && echo '当前目录:' && pwd && echo '图标目录内容:' && ls -la public/assets/images/logos/ && hugo --gc --minify --cleanDestinationDir -d public && echo '构建后public目录内容:' && ls -la public/assets/images/logos/"
   publish = "public"
   
 [context.production.environment]
@@ -8,7 +8,7 @@
   HUGO_ENABLEGITINFO = "true"
   
 [context.deploy-preview]
-  command = "echo '开始构建' && mkdir -p public && echo '当前目录:' && pwd && echo '图标目录内容:' && ls -la public/assets/images/logos/ && hugo --gc --minify --buildFuture -b $DEPLOY_PRIME_URL --verbose --verboseLog -d public && echo '构建后public目录内容:' && ls -la public/assets/images/logos/"
+  command = "echo '开始构建' && mkdir -p public && echo '当前目录:' && pwd && echo '图标目录内容:' && ls -la public/assets/images/logos/ && hugo --gc --minify --buildFuture -b $DEPLOY_PRIME_URL -d public && echo '构建后public目录内容:' && ls -la public/assets/images/logos/"
   
 [context.branch-deploy]
-  command = "echo '开始构建' && mkdir -p public && echo '当前目录:' && pwd && echo '图标目录内容:' && ls -la public/assets/images/logos/ && hugo --gc --minify --buildFuture -b $DEPLOY_PRIME_URL --verbose --verboseLog -d public && echo '构建后public目录内容:' && ls -la public/assets/images/logos/"
+  command = "echo '开始构建' && mkdir -p public && echo '当前目录:' && pwd && echo '图标目录内容:' && ls -la public/assets/images/logos/ && hugo --gc --minify --buildFuture -b $DEPLOY_PRIME_URL -d public && echo '构建后public目录内容:' && ls -la public/assets/images/logos/"
