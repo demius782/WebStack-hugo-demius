@@ -14,7 +14,7 @@
     - title: 1panel·后台
       logo: 1panel.jpg
       url: http://103.207.68.122:17113/
-      description: 博客后台
+      description: 服务器
     - title: GitHub
       logo: github.png
       url: https://github.com/
@@ -137,6 +137,16 @@
           logo: 开源中国.jpg
           url: https://www.oschina.net/
           description: 中文开源技术交流社区。
+    - term: 网站部署
+      links:
+        - title: Netlify
+          url: https://app.netlify.com/
+          logo: netlify.png
+          description: 免费CDN全自动化构建网站，适合个人博客导航
+        - title: 菜鸟教程
+          url: https://www.runoob.com/
+          logo: 菜鸟.png
+          description: 代码学习
     - term: 教程
       links:
         - title: 慕课网
@@ -171,10 +181,7 @@
           url: https://greasyfork.org/zh-CN
           logo: GK.png
           description: 一个专注于用户脚本的网站
-        - title: Finalshell 3.9.6 机器码生成器
-          url: https://fernii.net/
-          logo: 一言语录.png
-          description: Finalshell 3.9.6 机器码生成器合。
+        
 
     - term: 软件硬件
       links:
