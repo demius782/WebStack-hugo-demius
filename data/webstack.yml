@@ -179,7 +179,11 @@
         - title: 语雀
           logo: 语雀.webp
           url: https://www.yuque.com/
-          description: 专业的云端知识库。      
+          description: 专业的云端知识库
+        - title: 苍老师工具
+          logo: 
+          url: http://doc.vrd.net.cn/
+          description: 达内文档工具      
 
 - taxonomy: 开发设计
   icon: fas fa-tools fa-lg
