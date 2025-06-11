@@ -26,6 +26,67 @@
       description: 微信公众号：我在策
 
 
+- taxonomy: 人工智能
+  icon: far fa-star
+  list:
+    - term: AI
+      links:
+        - title: 豆包
+          logo: 豆包.png
+          url: https://www.doubao.com/
+          description: 抖音AI
+        - title: 腾讯元宝
+          logo: 腾讯元宝.png
+          url: https://yuanbao.tencent.com/chat/naQivTmsDa
+          description: 腾讯聊天室AI
+        - title: 文心一言
+          logo: 文心一言.png
+          url: https://yiyan.baidu.com/
+          description: 抖音旗下小说平台，流量最大
+        - title: 通义千问
+          logo: 通义千问.png
+          url: https://www.tongyi.com/qianwen
+          description: 阿里云人工智能
+        - title: Deepseek
+          logo: deepseek.png
+          url: https://chat.deepseek.com/
+          description: 杭州公司人工智能
+        - title: kimi
+          logo: kimi.png
+          url: https://www.kimi.com/
+          description: 北京月之暗面公司的产品
+        - title: 知乎直答
+          logo: 知乎直答.png
+          url: https://zhida.zhihu.com/
+          description: 知乎知识库，论文专业
+        - title: 即梦AI
+          logo: 即梦.png
+          url: https://jimeng.jianying.com/
+          description: AI生成式视频
+        - title: 可灵AI
+          logo: 可灵.png
+          url: https://klingai.com/cn/
+          description: AI生成式视频
+        - title: 讯飞绘镜
+          logo: 讯飞绘镜.png
+          url: https://typemovie.art/home/index.html
+          description: 短视频分镜生成
+        - title: 海螺AI
+          logo: 海螺AI.png
+          url: https://hailuoai.com/
+          description: 让你的创意变成大片
+    - term: 云端资源
+      links:
+        - title: 光算云
+          logo: 光算云.png
+          url: https://www.lightcc.cloud/
+          description: 再小的个体也有自己的品牌。
+        - title: 共享工作流
+          logo: 光算云.png
+          url: https://comfyworkflows.com/videos
+          description: 再小的个体也有自己的品牌。
+       
+
 - taxonomy: 创作之地
   icon: fas fa-flask fa-lg
   list:
