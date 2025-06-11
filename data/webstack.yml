@@ -154,6 +154,10 @@
           logo: 夸克.png
           url: https://www.quark.cn/
           description: 网盘、浏览器
+        - title: 蓝奏云
+          logo: lanzou.png
+          url: https://up.woozooo.com/
+          description: 网盘直链
         - title: 阿里云盘
           logo: 阿里云盘.png
           url: https://www.aliyundrive.com/
