@@ -339,7 +339,7 @@
 - taxonomy: 导航站点
   icon: fas fa-film fa-lg
   list:
-    - term: AI
+    - term: AI导航站
       links:
         - title: AI导航网
           logo: aidaohang.png
