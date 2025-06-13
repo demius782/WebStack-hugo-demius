@@ -1,4 +1,4 @@
-baseURL               = "https://dh.mzxi.cn/"
+baseURL               = "https://aa.demius.tech/"
 languageCode          = "zh-CN"
 title                 = "Demius 网址导航"
 theme                 = "WebStack-Hugo"
