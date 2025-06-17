@@ -35,6 +35,10 @@
           logo: 豆包.png
           url: https://www.doubao.com/
           description: 抖音AI
+        - title: 火山引擎
+          logo: hs.png
+          url: https://www.volcengine.com/
+          description: 人工智能大模型
         - title: 腾讯元宝
           logo: 腾讯元宝.png
           url: https://yuanbao.tencent.com/chat/naQivTmsDa
