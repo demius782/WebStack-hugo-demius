@@ -249,8 +249,8 @@
     - term: API
       links:
         - title: 一言语录
-          url: https://api.dwo.cc/api/yi?api=yan
-          logo: 一言语录.png
+          url: https://hitokoto.cn/
+          logo: yiyan.png
           description: 随机一句话语录。
         - title: 随机壁纸
           url: https://img-api.ymz.icu/
