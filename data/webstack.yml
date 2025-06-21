@@ -79,6 +79,17 @@
           logo: 海螺AI.png
           url: https://hailuoai.com/
           description: 让你的创意变成大片
+    - term: AI视频
+      links:
+        - title: 白日梦
+          logo: bairim.png
+          url: https://aibrm.com/
+          description: 小说推文视频生成
+      links:
+        - title: 星流
+          logo: xinliu.png
+          url: https://www.xingliu.art/
+          description: Agent、图像、音频、视频一站式生成
     - term: 云端资源
       links:
         - title: 光算云
