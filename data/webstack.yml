@@ -99,6 +99,13 @@
           logo: 光算云.png
           url: https://comfyworkflows.com/videos
           description: 再小的个体也有自己的品牌。
+    - term: 大模型
+      links:
+        - title: 魔搭社区
+          logo: moda.png
+          url: https://www.modelscope.cn/
+          description: 阿里达摩院推出的AI模型社区，超过300+的开源大模型。
+        
        
 
 - taxonomy: 自媒体
@@ -394,11 +401,11 @@
         - title: AI导航网
           logo: aidaohang.png
           url: https://www.ainav.cn/
-          description: AI导航网站
-        - title: 工具导航网
-          logo: gongju.png
-          url: https://toolsdar.cn/
-          description: 各种实用工具
+          description: AI导航网站。
+        - title: IThinkAI导航网
+          logo: ithinkai.png
+          url: https://app.ithinkai.cn/pages/tools/home
+          description: AI导航网站。
         - title: AI标签页
           logo: aibiaoqian.png
           url: https://www.aitags.cn/
@@ -406,15 +413,21 @@
         - title: Demius导航
           logo: 哔哩哔哩.png
           url: https://dh.demius.tech/
-          description: 巴拉巴拉小魔仙，古他那
+          description: 巴拉巴拉小魔仙，古他那。
+    - term: 影视导航站
+      links:
         - title: 可乐影视导航
           logo: kel.png
           url: https://klfans.com/
-          description: 影视站点导航站
+          description: 影视站点导航站。
     - term: 自媒体工作台
       links:
         - title: 自媒体工具
           logo: 网易云音乐.jpg
           url: https://zmt.cn/
-          description: 玩自媒体需要用的工具
+          description: 玩自媒体需要用的工具。
+        - title: 工具导航网
+          logo: gongju.png
+          url: https://toolsdar.cn/
+          description: 各种实用工具
         
