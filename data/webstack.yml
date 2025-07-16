@@ -218,6 +218,10 @@
           logo: 开源中国.jpg
           url: https://www.oschina.net/
           description: 中文开源技术交流社区。
+        - title: 清华大学开源软件镜像站
+          logo: qinhua.jpg
+          url: https://tuna.moe/
+          description: 清华大学 TUNA 协会。
     - term: 网站部署
       links:
         - title: 1panel
