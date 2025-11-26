@@ -2,17 +2,13 @@
 
 - taxonomy: 常用推荐
   icon: far fa-star
-  links: 
-    
-    - title: 豆包
-          logo: 豆包.png
-          url: https://www.doubao.com/
-          description: 抖音AI
-    - title: 关注我们
-      logo: 关注.jpg
-      url: https://blog.demius.tech/
-      qrcode: wzc.png
-      description: 微信公众号：我
+  list:
+   - term: 常用推荐
+      links:
+        - title: Demius`blog
+          logo: 知乎.png
+          url: https://blog.demius.tech/
+          description: Demius`blog，一个有趣的博客
 
 
 - taxonomy: 人工智能
