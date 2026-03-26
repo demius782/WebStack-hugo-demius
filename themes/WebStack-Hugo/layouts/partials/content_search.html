@@ -1,4 +1,8 @@
-<div class="header-big  post-top css-color mb-4" id="search-bg" style="">
+<div class="header-big post-top mb-4{{ if not $.Site.Params.images.searchBgCarousel }} css-color{{ end }}{{ if $.Site.Params.images.searchBgCarousel }} search-bg-carousel-host{{ end }}" id="search-bg" style="">
+    {{- if $.Site.Params.images.searchBgCarousel -}}
+    <div class="search-bg-carousel-layer active" id="search-bg-slide-0" aria-hidden="true"></div>
+    <div class="search-bg-carousel-layer" id="search-bg-slide-1" aria-hidden="true"></div>
+    {{- end -}}
     <div class="s-search">
         <div id="search" class="s-search mx-auto">
             <div id="search-list-menu" class="hide-type-list">

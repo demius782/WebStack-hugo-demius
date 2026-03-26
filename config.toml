@@ -35,8 +35,11 @@ publishDir            = "public"				# 站点静态文件保存目录   原本是
 
 [params.images]
     favicon           = "assets/images/bi-favicon.png"
-    searchImageL      = "assets/images/bg-dna.jpg"		# 搜索部分浅色背景图
-    searchImageD      = "assets/images/bg-dna.jpg"		# 搜索部分深色背景图
+    searchImageL      = "assets/images/bg-dna.jpg"		# 搜索部分浅色背景图（关闭轮播时使用）
+    searchImageD      = "assets/images/bg-dna.jpg"		# 搜索部分深色背景图（关闭轮播时使用）
+    searchBgCarousel  = true					# 为 true 时使用 static/assets/images/bj/ 下图片轮播；false 为原来的单张背景
+    searchBgCarouselDir = "assets/images/bj"			# 轮播图目录（相对站点 static/，构建后对应 public/assets/images/bj）
+    searchBgCarouselInterval = 6				# 轮播切换间隔（秒），至少为 1
     logoExpandLight   = "assets/images/bi-expand-dark.png"
     logoExpandDark    = "assets/images/bi-expand-light.png"
     logoCollapseLight = "assets/images/bi.png"

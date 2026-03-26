@@ -71,6 +71,21 @@ var theme = {"ajaxurl":"","addico":"https:\/\/nav.baidu.cn\/wp-content\/themes\/
     });
 </script>
 
+{{- $carousel := $.Site.Params.images.searchBgCarousel -}}
+{{- $sub := default "assets/images/bj" $.Site.Params.images.searchBgCarouselDir -}}
+{{- $sub = strings.TrimPrefix "/" $sub -}}
+{{- $fsPath := printf "static/%s" $sub -}}
+{{- $urls := slice -}}
+{{- if and $carousel (fileExists $fsPath) -}}
+{{- range sort (readDir $fsPath) "Name" -}}
+{{- if and (not .IsDir) (findRE `(?i)\.(jpe?g|png|webp|gif)$` .Name) -}}
+{{- $u := printf "%s/%s" $sub .Name | relURL -}}
+{{- $urls = $urls | append $u -}}
+{{- end -}}
+{{- end -}}
+{{- end -}}
+{{- $iv := default 6 $.Site.Params.images.searchBgCarouselInterval | int -}}
+{{- if lt $iv 1 }}{{ $iv = 6 }}{{ end -}}
 <script>
 //夜间(日间)模式
 (function(){
@@ -94,30 +109,65 @@ var theme = {"ajaxurl":"","addico":"https:\/\/nav.baidu.cn\/wp-content\/themes\/
         }
     }
 })();
-//夜间(日间)模式切换
-$("#search-bg").css("background-image", "url({{ $.Site.Params.images.searchImageL }})");   //默认浅色背景
-function switchNightMode(){
-    var night = document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1") || '0';
-    if(night == '0'){
-	$("#search-bg").css("background-image", "url({{ $.Site.Params.images.searchImageL }})");
-        document.body.classList.remove('io-grey-mode');
-        document.body.classList.add('io-black-mode');
-        document.cookie = "night=1;path=/"
-        console.log(' ');
-        $(".switch-dark-mode").attr("data-original-title","日间模式");
-        $(".mode-ico").removeClass("icon-night");
-        $(".mode-ico").addClass("icon-light");
-    }else{
-	$("#search-bg").css("background-image", "url({{ $.Site.Params.images.searchImageD }})")
-        document.body.classList.remove('io-black-mode');
-        document.body.classList.add('io-grey-mode');
-        document.cookie = "night=0;path=/"
-        console.log(' ');
-        $(".switch-dark-mode").attr("data-original-title","夜间模式");
-        $(".mode-ico").removeClass("icon-light");
-        $(".mode-ico").addClass("icon-night");
+// 搜索区背景：轮播或单图
+(function(){
+    var carouselOn = {{ if $carousel }}true{{ else }}false{{ end }};
+    var carouselUrls = {{ $urls | jsonify | safeJS }};
+    var intervalMs = {{ mul $iv 1000 }};
+    var imgL = "url({{ $.Site.Params.images.searchImageL }})";
+    var imgD = "url({{ $.Site.Params.images.searchImageD }})";
+    function applySearchBg(cssUrl){
+        $("#search-bg").css("background-image", cssUrl);
     }
-}
+    function skipBgOnNightToggle(){
+        return carouselOn && carouselUrls.length > 0;
+    }
+    if(carouselOn && carouselUrls.length > 1){
+        var $a = $("#search-bg-slide-0");
+        var $b = $("#search-bg-slide-1");
+        $a.css("background-image", "url(" + carouselUrls[0] + ")");
+        var idx = 0, flip = 0;
+        setInterval(function(){
+            var next = (idx + 1) % carouselUrls.length;
+            var $cur = flip === 0 ? $a : $b;
+            var $nxt = flip === 0 ? $b : $a;
+            $nxt.css("background-image", "url(" + carouselUrls[next] + ")");
+            $nxt.addClass("active");
+            $cur.removeClass("active");
+            idx = next;
+            flip = 1 - flip;
+        }, intervalMs);
+    }else if(carouselOn && carouselUrls.length === 1){
+        $("#search-bg-slide-0").css("background-image", "url(" + carouselUrls[0] + ")").addClass("active");
+        $("#search-bg-slide-1").remove();
+    }else{
+        if(carouselOn){
+            $(".search-bg-carousel-layer").remove();
+            $("#search-bg").removeClass("search-bg-carousel-host").addClass("css-color");
+        }
+        applySearchBg(imgL);
+    }
+    window.switchNightMode = function(){
+        var night = document.cookie.replace(/(?:(?:^|.*;\s*)night\s*\=\s*([^;]*).*$)|^.*$/, "$1") || '0';
+        if(night == '0'){
+            if(!skipBgOnNightToggle()){ applySearchBg(imgL); }
+            document.body.classList.remove('io-grey-mode');
+            document.body.classList.add('io-black-mode');
+            document.cookie = "night=1;path=/";
+            $(".switch-dark-mode").attr("data-original-title","日间模式");
+            $(".mode-ico").removeClass("icon-night");
+            $(".mode-ico").addClass("icon-light");
+        }else{
+            if(!skipBgOnNightToggle()){ applySearchBg(imgD); }
+            document.body.classList.remove('io-black-mode');
+            document.body.classList.add('io-grey-mode');
+            document.cookie = "night=0;path=/";
+            $(".switch-dark-mode").attr("data-original-title","夜间模式");
+            $(".mode-ico").removeClass("icon-light");
+            $(".mode-ico").addClass("icon-night");
+        }
+    };
+})();
 </script>
 </body>
 </html>

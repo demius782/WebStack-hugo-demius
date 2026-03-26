@@ -35,8 +35,11 @@ publishDir            = "public"				# 站点静态文件保存目录
 
 [params.images]
     favicon           = "assets/images/bi-favicon.png"
-    searchImageL      = "assets/images/bg-dna.jpg"		# 搜索部分浅色背景图
-    searchImageD      = "assets/images/bg-dna.jpg"		# 搜索部分深色背景图
+    searchImageL      = "assets/images/bg-dna.jpg"		# 搜索部分浅色背景图（关闭轮播时使用）
+    searchImageD      = "assets/images/bg-dna.jpg"		# 搜索部分深色背景图（关闭轮播时使用）
+    searchBgCarousel  = false					# true：使用 static 下 searchBgCarouselDir 目录内图片轮播
+    searchBgCarouselDir = "assets/images/bj"			# 轮播图目录（相对站点 static/）
+    searchBgCarouselInterval = 6				# 轮播间隔（秒）
     logoExpandLight   = "assets/images/bi-expand-dark.png"
     logoExpandDark    = "assets/images/bi-expand-light.png"
     logoCollapseLight = "assets/images/bi.png"
